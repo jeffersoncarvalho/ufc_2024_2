@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minha primeira página HTML 5</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <h2>Entre com suas informações</h2>
+        <form action="https://httpbin.org/post" method="post">
+            Primeiro nome:
+            <input 
+                type="text" 
+                name="firstname"
+                maxlength="5"
+            />
+            <br />
+            <br />
+            Segundo nome:
+            <input 
+                type="text" 
+                name="surname"
+            />
+            <br />
+            <br />
+            Email:
+            <input 
+                type="email" 
+                name="surname"
+                readonly
+                disabled
+                size="100px"
+            />
+            <br />
+            <br />
+            Password:
+            <input 
+                type="password"
+                name="password"
+            />
+
+            <br />
+            <br />
+            Entre com o seu celular:
+
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            <input type="number" name="quantidade"  min="1" max="9"/>
+            
+            <br />
+            Curso: <br />
+            <input type="radio" name="curso" value="DD" checked/>Design Digital <br />
+            <input type="radio" name="curso" value="SI" />Sistemas de Informação <br />
+            <input type="radio" name="curso" value="EC" />Engenharia da Computação
+            <br />
+            <br />
+            Áreas de Interesse: <br />
+            <input type="checkbox" name="a1" value="cg" checked/>Computação Gráfica <br />
+            <input type="checkbox" name="a1" value="al" />Algorítimos <br />
+            <input type="checkbox" name="a1" value="de" />Desenho
+            <br />
+            Data:
+            <input type="date" name="aniv"/
+            <input 
+                type="submit"
+                value="Enviar"
+            />
+        </form>
+    </body>
+</html>
