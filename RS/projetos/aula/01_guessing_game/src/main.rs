@@ -11,24 +11,40 @@ fn main() {
                                 .gen_range(1..=100);
     println!("The secret number is: {secret_number}");
 
-    //keyboard input
-    println!("Please, input your guess: ");
+    loop {
 
-    let mut guess = String::new();
+        //keyboard input
+        println!("Please, input your guess: ");
 
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+        let mut guess = String::new();
 
-    //parse to integer (shadowing)
-    let guess: u32 = guess.trim().parse().expect("Please enter a number!");
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
 
-    println!("You guessed: {}", guess);
+        //parse to integer (shadowing)
+        let guess: u32 =  match guess
+                                .trim()
+                                .parse() //Enumeration (Result)
+                                {
+                                    Ok(num) => num,
+                                    Err(_) => { 
+                                        println!("Enter a valid number!");
+                                         continue; 
+                                    },
+                                };
 
-    //comparing guess with secret_number
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("To small!"),
-        Ordering::Greater => println!("To big!"),
-        Ordering::Equal => println!("You win!"),
-    } //match-cmp
+        println!("You guessed: {}", guess);
+
+        //comparing guess with secret_number
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("To small!"),
+            Ordering::Greater => println!("To big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            },
+        } //match-cmp
+    }//loop´
+
 }
