@@ -1,0 +1,31 @@
+p {
+    color: blue;
+    font-size: 40px;
+}
+
+div > p {
+    background-color: aquamarine;
+}
+
+h1, h2 {
+    background-color: aqua;
+}
+
+#meu_paragrafo {
+    color: beige;
+    background-color: black;
+}
+
+.minha_classe {
+    color: yellowgreen;
+    background-color: pink;
+    border-style: dashed;
+}
+
+.outra_classe {
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+

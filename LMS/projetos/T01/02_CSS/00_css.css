@@ -1,0 +1,9 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blanchedalmond;
+}
+div {
+    color: pink;
+    border-style: double;
+    border-color: blue;
+}

@@ -1,0 +1,16 @@
+.minha_div {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: 10px inset gray;
+    padding: 10px;
+    margin: 50px;
+    border-style: dotted;
+}
+
+.estilo {
+    background-color: red;
+    color: yellow;
+}
+
+/*largura real = 200 + 2*10 + 2*10 + 2*50 = 340px*/

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulários</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Formulários</h1>
+        <form action="https://httpbin.org/post" method="POST"> 
+            Nome: <br /> <input type="text" name="firstname" maxlength="5" value="Fulano"/> <br /> <br />
+            Sobrenome: <br /><input type="text" name="surname" /> <br /> <br />
+            Senha: <br /><input type="password" name="password" /> <br /> <br />
+            Universidade: <br />
+            <input type="radio" name="university" value="ufc" checked/> UFC
+            <input type="radio" name="university" value="ifce"/> IFCE
+            <input type="radio" name="university" value="uece"/> UECE <br /> <br />
+            Áreas de Interesse: <br />
+            <input type="checkbox" name="ai" value="des"> Desenho 
+            <input type="checkbox" name="ai" value="tip"> Tipografia
+            <input type="checkbox" name="ai" value="pro"> Programação
+            <input type="checkbox" name="ai" value="his"> História <br /> <br />
+
+            <input type="hidden" name="code" value="223343" />
+
+            Entre com seu celular: <br >
+            <input type="number" name="quantidade"  min="0" max="9"/> 
+            <input type="number" name="quantidade"  min="0" max="9"/>
+            <input type="number" name="quantidade"  min="0" max="9"/>
+            <input type="number" name="quantidade"  min="0" max="9"/>
+            <input type="number" name="quantidade"  min="0" max="9"/>
+            <input type="number" name="quantidade"  min="0" max="9"/>
+            <input type="number" name="quantidade"  min="0" max="9"/>
+            <input type="number" name="quantidade"  min="0" max="9"/>
+
+            <br>
+            Entre com a data: <input type="date" name="date"/> <br />
+            
+            <input type="submit" value="Enviar" />
+        </form>
+    </body>
+</html>
