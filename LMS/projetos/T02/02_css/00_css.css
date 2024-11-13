@@ -1,0 +1,24 @@
+body {
+    background-color: beige;
+}
+
+h1, h2 {
+    color: red;
+}
+
+div > p{
+    background-color: aquamarine;
+}
+
+.classe_paragrafo {
+    background-color: yellow;
+}
+
+.minha_div {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    padding: 20px;
+    border: 10px solid gray;
+    margin: 10px;
+}
