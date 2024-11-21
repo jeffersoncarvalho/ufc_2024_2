@@ -1,0 +1,38 @@
+a {
+    font-size: 25px;
+}
+
+/* unvisited link */
+a:link {
+  color: #ff0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00ff00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ff00ff;
+}
+
+/* selected link */
+a:active {
+  color: #0000ff;
+}
+
+a.highlighted:hover {
+    font-size: 30px;
+    background-color: aliceblue;
+}
+
+.minha_div {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+}
+
+.minha_div:hover {
+    background-color: green;
+}

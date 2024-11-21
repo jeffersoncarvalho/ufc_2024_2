@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function diana() {
+                let diana = document.getElementsByClassName("diana")[0];
+                diana.style.display = "none";
+
+            }
+
+            function ingrid() {
+                let ingrid = document.getElementsByClassName("ingrid")[0];
+                ingrid.style.visibility = "hidden";
+            }
+
+            function vivi() {
+
+                let diana = document.getElementsByClassName("diana")[0];
+                diana.style.display = "block";
+
+                let ingrid = document.getElementsByClassName("ingrid")[0];
+                ingrid.style.visibility = "visible";
+            }
+        </script>
+        <style>
+            div {
+                border: 1px solid gray;
+                padding: 5px;
+            }
+
+            div.diana {
+                display: block;
+                
+            }
+
+            div.ingrid {
+                display: block;
+                visibility: visible;
+                
+            }
+            
+            div.vivi {
+                display: block;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Teste de Display 2 - Interativo</h1>
+    
+        <table>
+            <tr>
+                <td>
+                    <div class="diana">
+                        <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/11/Diana-Medina-e1730202955582-125x150.jpeg" width="125px" height="150px"/>
+                        <br />
+                        <button onclick="diana()">
+                            DISPLAY:NONE
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div class="ingrid">
+                        <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Ingrid-Teixeira-Monteiro1-113x150.png" width="125px" height="150px"/>
+                        <br />
+                        <button onclick="ingrid()">
+                            VISIBILITY:HIDDEN
+                        </button>
+                    </div>
+                </td>
+                
+                <td>
+                    <div class="vivi">
+                        <img src="https://www.quixada.ufc.br/wp-content/uploads/2017/04/IMG_20190328_143839009-e1555075048369-110x150.jpg" width="125px" height="150px"/>
+                        <br />
+                        <button onclick="vivi()">
+                            RESET ALL
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

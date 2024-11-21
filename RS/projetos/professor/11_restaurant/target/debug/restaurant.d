@@ -1,0 +1,1 @@
+C:\Quixada\2024_2\RS\projetos\professor\11_restaurant\target\debug\restaurant.exe: C:\Quixada\2024_2\RS\projetos\professor\11_restaurant\src\lib.rs C:\Quixada\2024_2\RS\projetos\professor\11_restaurant\src\main.rs

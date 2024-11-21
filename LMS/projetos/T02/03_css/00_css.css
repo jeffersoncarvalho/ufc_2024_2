@@ -1,0 +1,44 @@
+p.invisivel {
+    display: none;
+}
+
+div.dica:hover > p.invisivel{
+   display: block;
+}
+
+a {
+    font-size: larger;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: aquamarine;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: blueviolet;
+}
+
+div.div-hover {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+}
+
+div.div-hover:hover {
+    background-color: blue;
+    width: 30px;
+} 
+
+div.outra-classe {
+    width: 100px;
+    height: 50px;
+    background-color: pink;
+}

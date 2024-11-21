@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function teste() {
+                alert("Testando 1 2 3!");
+            }
+
+            function sena() {
+                let elem = document.getElementsByClassName("sena")[0];
+                elem.style.display = "none"
+            }
+
+            function aragao() {
+                let elem = document.getElementsByClassName("aragao")[0];
+                elem.style.visibility = "hidden"
+            }
+
+            function joao() {
+                let sena = document.getElementsByClassName("sena")[0];
+                sena.style.display = "block"
+
+                let aragao = document.getElementsByClassName("aragao")[0];
+                aragao.style.visibility = "visible"
+            }
+        </script>
+        <style>
+            div.block {
+                border: 5px solid green;
+                display: block;
+            }
+            span.inline {
+                border: 5px solid red;
+                display: block;
+                visibility: hidden;
+            }
+            div.inline-block{
+                border: 5px solid yellowgreen;
+                display: inline-block;
+            }
+
+            div {
+                border: 5px solid yellowgreen;
+               
+            }
+
+            div.sena {
+                display: block;
+            }
+            div.aragao {
+                display: block;
+            }
+            div.joao {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Displays</h1>
+        <div class="block">
+            Sou uma div em bloco
+        </div>
+        Eu sou um elemento que contêm um <span class="inline">span</span> dentro
+        <div class="inline-block">
+            Sou uma div padrão!
+        </div>
+        Texto depois
+        <h1>Teste de Imagens</h1>
+        <table>
+            <tr>
+                <td>
+                    <div class="sena">
+                        <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/David-Sena-Oliveira-Final1-240x320.png"
+                             width="100px"/>
+                        <br />
+                        <button onclick="sena()">display:none</button>
+                    </div>
+                </td>
+                <td>
+                    <div class="aragao">
+                        <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Arag%C3%A3o-240x320.png"
+                             width="100px"/>
+                        <br />
+                        <button onclick="aragao()">visibility:hidden</button>
+                    </div>
+                </td>
+                <td>
+                    <div class="joao">
+                        <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/11/Jo%C3%A3o-240x320.png"
+                             width="100px"/>
+                        <br />
+                        <button onclick="joao()">Reset All</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

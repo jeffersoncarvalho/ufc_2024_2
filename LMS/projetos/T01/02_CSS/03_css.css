@@ -1,0 +1,57 @@
+a {
+    font-size: 30px;
+    text-decoration: none;
+}
+a:link {
+    color: red;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: #FF00FF;
+}
+a:active {
+    color: blue;
+}
+
+a.minha_classe:hover {
+    color: yellow;
+    font-size: 50px;
+}
+
+div.minha_div {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
+
+div.minha_div:hover {
+    background-color: green;
+}
+
+p.escondido {
+    display: none;
+    background-color: azure;
+    font-weight: bold;
+    font-size: larger;
+}
+
+div.mostrar_dica:hover p.escondido {
+    display: block;
+}
+
+p:first-child {
+    color: red;
+    font-weight: bolder;
+}
+
+p:hover i:first-child {
+    font-size: 25px;
+    color: green;
+    font-size: bolder;
+}
+
+q:lang(casa) {
+    quotes: "~" "&"
+}
