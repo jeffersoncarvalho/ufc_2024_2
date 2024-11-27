@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .flex-container {
+                background-color: dodgerblue;
+                padding: 10px;
+                height: 300px;
+
+                /*Define que essa classe vai ser um flex container*/
+                display: flex;
+                /*Modifica a direção do eixo principal (main axis)*/
+                flex-direction: row;
+                /*"Empacota" ou não os elementos filhos*/
+                flex-wrap: wrap;
+                /*atalho (shorthand) para flex-direction e flex-wrap*/
+                /*flex-flow: row wrap;*/
+                /*Obedece o que foi decidido em flex-direction*/
+                justify-content: center;
+                /*Obedece o eixo perpendicular ao eixo que foi definido em flex-direction (cross axis)*/
+                align-items: center;
+                /*Alinha de acordo com o flex line (linha flex)*/
+                /*align-content: center;*/
+            }
+            .flex-container > div {
+                background-color: azure;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                font-size: xx-large;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- div container -->
+        <div class="flex-container">
+            <div style="flex: 1;">1</div>
+            <div style="flex: 2;">2</div>
+            <div style="flex: 3;">3</div>
+            
+            <!--
+            <div>4</div>
+            
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            -->
+        </div>
+    </body>
+</html>
