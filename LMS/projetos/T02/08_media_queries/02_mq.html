@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .content {
+                background-color: antiquewhite;
+            }
+            #menu-lista {
+                margin: 0px;
+                padding: 0px;
+            }
+            .menu-item {
+                list-style-type: none;
+
+                background-color: azure;
+                border: 1px solid black;
+                border-radius: 5px;
+                margin: 4px;
+                padding: 2px;
+            }
+
+            /*Versão 01 -  menu horizontal*/
+            /*
+            @media screen and (min-width:480px){
+                #menu-lista {
+                    display: flex;
+                }
+                .menu-item {
+                    flex: 1;
+                }
+            }*/
+
+            /*Versão 02 - menu flutuante*/
+            @media screen and (min-width:480px){
+                .menu-lateral {
+                    width: 150px;
+                    float: left;
+                }
+                #main {
+                    margin-left: 160px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="menu-lateral">
+                <ul id="menu-lista">
+                    <li class="menu-item">Link 1</li>
+                    <li class="menu-item">Link 3</li>
+                    <li class="menu-item">Link 4</li>
+                    <li class="menu-item">Link 5</li>
+                    <li class="menu-item" style="flex: 2;">Link 6</li>
+                </ul>
+            </div>
+            <div id="main">
+                <h1>Teste de Menu Flutuante!</h1>
+                <p>
+                    Ipsum Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Quia soluta, aperiam ex 
+                    autem, vero amet similique laborum ullam 
+                    sequi blanditiis veritatis esse 
+                    molestias? Eveniet officiis aliquam
+                    error, perspiciatis pariatur suscipit.
+                    
+                    Ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nobis suscipit, dolorum quidem officia delectus voluptatum accusamus quam ipsam totam tempore ab mollitia necessitatibus dignissimos libero praesentium, quod reiciendis consequuntur!
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
