@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div.css {
+        width: 50px;
+        height: 25px;
+
+        background-color: limegreen;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+
+        animation-name: run-and-back;
+        animation-duration: 6s;
+
+        position: relative;
+        left: 0;
+    }
+
+    @keyframes run-and-back {
+        0% {
+            transform: rotate(0deg);
+            left: 0px;
+        }
+        25% {
+            transform: rotate(-25deg);
+            left: 0px;
+        }
+        50% {
+            transform: rotate(-25deg);
+            left: 400px;
+        }
+        75% {
+            transform: rotate(-25deg);
+            left: 400px;
+        }
+        100% {
+            transform: rotate(360deg);
+            left: 0px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="css">
+        CSS
+    </div>
+</body>
+</html>
