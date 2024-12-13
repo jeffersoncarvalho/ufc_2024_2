@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div.animation {
+        
+        width: 200px;
+        height: 200px;
+        background-color: burlywood;
+
+        position: absolute;
+        left: 100px;
+        top: 100px;
+
+        animation-name: minha-animacao;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes minha-animacao {
+        from { background-color: burlywood;}
+        to { background-color: blueviolet; left: 200px;}
+    }
+</style>
+</head>
+<body>
+    <h1>Animações em CSS</h1>
+    <div class="animation">
+
+    </div>
+</body>
+</html>

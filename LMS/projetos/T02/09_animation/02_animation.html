@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div.animation {
+        
+        width: 100px;
+        height: 100px;
+        background-color: burlywood;
+
+        position: relative;
+        left: 0px;
+        top: 0px;
+
+        animation-name: minha-animacao;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes minha-animacao {
+        0% {
+            left: 0px;
+            top: 0px;
+            background-color: burlywood;
+        }
+        25% {
+            left: 400px;
+            top: 0px;
+            background-color: red;
+        }
+        50% {
+            left: 400px;
+            top: 400px;
+            background-color: blue;
+        }
+        75% {
+            left: 0px;
+            top: 400px;
+            background-color: green;
+        }
+        100% {
+            left: 0px;
+            top: 0px;
+            background-color: burlywood;
+
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Animações em CSS</h1>
+    <div class="animation">
+
+    </div>
+</body>
+</html>
