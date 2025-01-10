@@ -1,0 +1,68 @@
+<html>
+<body>
+    <form id="formulario">
+        Nome: <input type="text" name="nome" value="Pato"/> <br />
+        Sobrenome: <input type="text" name="sobrenome" value="Donald"/>
+    </form>
+
+    <form id="form2">
+        Idade: <input type="text" name="idade" value="20"/>
+    </form>
+
+    <form id="endereco">
+        Rua: <input name="rua" value="Rua das Chagas" /> <br />
+        Número: <input name="numero" value="13" /> <br />
+        Bairro: <input name="bairro" value="Centro" /> <br />
+        Cidade: <input name="cidade" value="Quixadá" /> <br />
+    </form>
+
+
+    <h3>Rua</h3>
+    <h3 id="idBairro">Bairro</h3>
+    <h3 class="classCidade">Cidade</h3>
+
+    <script>
+        //primeira forma
+        /*let formulario = document.forms["formulario"];
+        
+        let texto = "";
+        texto = formulario.elements[0].value + "<br />";
+        texto += formulario.elements[1].value;
+
+        let p = document.getElementById("myP");
+        p.innerHTML = texto;*/
+
+        //segunda forma
+        //let idade = document.forms["form2"]["idade"].value;
+        //let idade = document.forms.form2.idade.value;
+        /*let idade = document.forms[1][0].value;
+        
+        let pIdade = document.getElementById("idIdade");
+        pIdade.innerHTML = idade*/
+
+
+        //pegando a rua
+        let rua = document.forms["endereco"]["rua"].value;
+
+        //imprimindo a rua
+        let pRua = document.getElementsByTagName("h3")[0];
+        pRua.innerHTML = rua
+
+        //pegando o bairro
+        let bairro =  document.forms.endereco.bairro.value;
+
+        //imprime o bairro
+        let pBairro = document.getElementById("idBairro");
+        pBairro.innerHTML = bairro;
+
+        //pegando a cidade
+        let cidade = document.forms["endereco"]["cidade"].value
+
+        //imprime cidade
+        let pCidade = document.getElementsByClassName("classCidade")[0]
+        pCidade.innerHTML = cidade
+
+    </script>
+
+</body>
+</html>

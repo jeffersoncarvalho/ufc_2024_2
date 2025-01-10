@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Mudando Imagens!</h1>
+    <img
+        id="imagem"
+        height="150px" 
+        src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Jefferson-de-Carvalho-Silva1-240x320.png"
+    />
+    <br />
+    <button onclick="mudarParaAragas()">Aragas</button>
+    <button onclick="mudarParaVilnei()">Vilnei</button>
+    <button onclick="mudarParaIngrid()">Ingrid</button>
+    <script>
+        function mudarParaAragas() {
+            let imagem = document.getElementById("imagem");
+            imagem.src = "https://www.quixada.ufc.br/wp-content/uploads/2015/05/Arag%C3%A3o-113x150.png";
+            //imagem.style.width = 300+"px";
+            imagem.style.height = "200px";
+        }
+
+        function mudarParaVilnei() {
+            let imagem = document.getElementById("imagem");
+            imagem.src = "https://www.quixada.ufc.br/wp-content/uploads/2015/11/Jo%C3%A3o-113x150.png"
+        }
+
+        function mudarParaIngrid() {
+            let imagem = document.getElementById("imagem");
+            imagem.src = "https://www.quixada.ufc.br/wp-content/uploads/2015/05/Ingrid-Teixeira-Monteiro1-113x150.png"
+        }
+        //document.write(Date())
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .minhaClasse{
+                background-color: red;
+            }
+        </style>
+    </head>
+<body>
+    
+    <h1>Pegando parágrafos!</h1>
+    <p>Este é o primeiro parágrafo!</p>
+    <p>Este é o segundo parágrafo!</p>
+    <p>Este é o terceiro parágrafo!</p>
+    
+    <p id = "myP">TESTE 1</p>
+    <p id = "myP">TESTE 2</p>
+    <p id = "myP">TESTE 3</p>
+
+    <p class="minhaClasse">P com classe 1</p>
+    <p class="minhaClasse">P com classe 2</p>
+    <p class="minhaClasse">P com classe 3</p>
+    <div class="minhaClasse">Essa é uma div com classe!</div>
+    
+    <script>
+       let paragrafos = document.getElementsByTagName("p");
+       paragrafos[5].innerHTML = "Mudei o primeiro"
+
+       let p = document.getElementById("myP");
+       p.innerHTML = "Mudei"
+
+       let classes = document.getElementsByClassName("minhaClasse");
+       classes[2].innerHTML = "TESTE"
+
+       let paragrafosComClasse = document.querySelectorAll("p.minhaClasse");
+       paragrafosComClasse[1].innerHTML = "TESTE 2"
+    </script>
+</body>
+</html>

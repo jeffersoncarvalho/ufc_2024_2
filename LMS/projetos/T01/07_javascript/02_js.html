@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Esse é o Título!</title>
+    </head>
+    <body>
+        <a href="">Meu Link</a>
+        <h1>Meu Cabeçalho</h1>
+        <p id="meuP">Sem Texto!</p>
+        
+        <p>Primeiro Parágrafo</p>
+        <p>Segundo Parágrafo</p>
+        <p>Terceiro Parágrafo</p>
+
+        <h1 class="minhaClasse">Header 1</h1>
+        <h2 class="minhaClasse">Header 2</h2>
+        <h3 class="minhaClasse">Header 3</h3>
+        <div class="minhaClasse">MINHA DIV</div>
+
+        <button onclick="mudarParagrafo()">
+            Atualizar Parágrafo!
+        </button>
+        <script>
+            function mudarParagrafo() {
+                let par = document.getElementById("meuP");
+                par.innerHTML = "Texto novo!"
+            }
+
+            //pegando todos os parágrafos
+            let pars = document.getElementsByTagName("p");
+            pars[2].innerHTML = "Segundo Parágrafo Modificado"
+
+            let tags = document.getElementsByClassName("minhaClasse");
+            tags[2].innerHTML = "TEXTO"
+        </script>
+    </body>
+</html>
