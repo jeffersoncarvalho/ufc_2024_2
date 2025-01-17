@@ -11,6 +11,7 @@
     <button onclick="mudarParaAragas()">Aragas</button>
     <button onclick="mudarParaVilnei()">Vilnei</button>
     <button onclick="mudarParaIngrid()">Ingrid</button>
+    <h1 id="meuH1">Meu cabeçalho</h1>
     <script>
         function mudarParaAragas() {
             let imagem = document.getElementById("imagem");
@@ -28,6 +29,10 @@
             let imagem = document.getElementById("imagem");
             imagem.src = "https://www.quixada.ufc.br/wp-content/uploads/2015/05/Ingrid-Teixeira-Monteiro1-113x150.png"
         }
+        
+        let h1 = document.getElementById("meuH1");
+        h1.style.backgroundColor = "yellow"
+        h1.style.fontFamily = "Arial"
         //document.write(Date())
     </script>
 </body>
