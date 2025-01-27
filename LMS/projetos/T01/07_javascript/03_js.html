@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .div-amarela {
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Alterando cor</h1>
+        <div class="div-amarela">
+        
+        </div>
+        <br />
+        <button onclick="mudar_cor()">
+            MUDAR COR
+        </button>
+        <script>
+            function mudar_cor() {
+                let div = document.getElementsByClassName("div-amarela")[0];
+                div.style.backgroundColor = "red"
+                
+                //imagem.src = "...caminho da nova imagem"
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Posição</title>
+    <style>
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+      }
+
+      .absolute {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        position: absolute;
+        top: 75px;
+        left: 75px;
+      }
+
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Controle de Posição</h1>
+    <div class="container">
+      <div class="absolute"></div>
+    </div>
+    <button id="cima" onclick="cima()">CIMA</button>
+    <button id="esquerda" onclick="esquerda()">ESQUERDA</button>
+    <button id="direita" onclick="direita()">DIREITA</button>
+    <button id="baixo" onclick="baixo()">BAIXO</button>
+
+    <script>
+        //let x = 75;
+        //let y = 75;
+
+        function cima() {
+            let div_amarela = document.getElementsByClassName("absolute")[0];
+            let y = parseInt(getComputedStyle(div_amarela).top);
+            y = y - 10;
+            if (y < 0) {
+                y = 0;
+            }
+            //div_amarela.style.top = y + "px";
+            div_amarela.style.top = `${y}px`;
+
+        }
+        function esquerda() {
+            /*let div_amarela = document.getElementsByClassName("absolute")[0];
+            x = x - 10;
+            div_amarela.style.left = x + "px";*/
+            let div_amarela = document.getElementsByClassName("absolute")[0];
+            let x = parseInt(getComputedStyle(div_amarela).left);
+            x = x - 10;
+            if (x < 0) {
+                x = 0;
+            }
+            //div_amarela.style.top = y + "px";
+            div_amarela.style.left = `${x}px`;
+        }
+        function direita() {
+            let div_amarela = document.getElementsByClassName("absolute")[0];
+            let x = parseInt(getComputedStyle(div_amarela).left);
+            x = x + 10;
+            if ((x+50) > 200) {
+                x = 150;
+            }
+            //div_amarela.style.top = y + "px";
+            div_amarela.style.left = `${x}px`;
+        }
+        function baixo() {
+            let div_amarela = document.getElementsByClassName("absolute")[0];
+            let y = parseInt(getComputedStyle(div_amarela).top);
+            y = y + 10;
+            if ((y+50) > 200) {
+                y = 150;
+            }
+            //div_amarela.style.top = y + "px";
+            div_amarela.style.top = `${y}px`;
+        }
+    </script>
+  </body>
+</html>

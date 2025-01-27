@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trocar Imagem</title>
+  </head>
+  <body>
+    <h1>Troque a Imagem</h1>
+    <img id="imagem" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-113x150.png" alt="Imagem 1" width="113" />
+    <br />
+    <button id="botao" onclick="trocar_imagem()">Trocar Imagem</button>
+    <script>
+        let flag = true;
+        function trocar_imagem() {
+            let imagem = document.getElementById("imagem");
+            if(flag === true) {
+                imagem.src = "https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-113x150.png"
+                //flag = false;
+            }else {
+                imagem.src = "https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-113x150.png"
+                //flag = true
+            }
+            flag = !flag;
+        }
+    </script>
+  </body>
+</html>

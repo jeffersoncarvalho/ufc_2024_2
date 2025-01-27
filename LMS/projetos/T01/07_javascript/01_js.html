@@ -2,14 +2,32 @@
 <html>
     <head>
         <title>Esse é o Título!</title>
+        <style>
+            .minha_div {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
     </head>
     <body>
         <a href="">Meu Link</a>
         <h1>Meu Cabeçalho</h1>
         <p id="meuP">Sem Texto!</p>
+        <div class="minha_div">
+
+        </div>
+        <button onclick="mudar_cor()">
+            MUDAR COR
+        </button>
         <script>
             let par = document.getElementById("meuP");
             par.innerHTML = "Texto novo!"
+
+            function mudar_cor() {
+                let div = document.getElementsByClassName("minha_div")[0];
+                div.style.backgroundColor = "yellow";
+            }
         </script>
     </body>
 </html>
