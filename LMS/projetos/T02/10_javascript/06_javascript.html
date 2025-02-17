@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #texto-escondido {
+            display: none;
+        }
+        .mouse {
+            padding: 30px;
+            font-size: larger;
+            font-weight: bold;
+            border: none;
+            background-color: bisque;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos</h1>
+
+    <h3>1 - Evento do Clique!</h3>
+    <button onclick="clique()">Click-Me</button>
+    <div id="texto-escondido">
+        TEXTO ESCONDIDO!
+    </div>
+
+    <h3>2 - Evento do oninput</h3>
+    <input type="text " id="my-input" oninput="onInput()"/>
+    
+    <h3>3 - Evento do onchange</h3>
+    <input type="text " id="my-input-2" onchange="onChange()"/>
+    
+    <h3>4 - Evento do onmouseover e onmouseout</h3>
+    <button 
+        class="mouse" 
+        id="mouse"
+        onmouseover="mouseOver()"
+        onmouseout="mouseOut()"
+        >
+        PASSE O MOUSE
+    </button>
+    <script>
+        function clique() {
+            let textoEscondido = 
+            document.getElementById("texto-escondido");
+            
+            if(textoEscondido.style.display == "block"){
+                textoEscondido.style.display = "none";
+            }else {
+                textoEscondido.style.display = "block"
+            }
+        }
+
+        function onInput() {
+            let texto = document.getElementById("my-input");
+            texto.value = texto.value.toUpperCase();
+        }
+
+        function onChange() {
+            let texto = document.getElementById("my-input-2");
+            texto.value = texto.value.toUpperCase();
+        }
+
+        function mouseOver() {
+            let button = document.getElementById("mouse");
+            button.innerHTML = "OBRIGADO!"
+        }
+
+        function mouseOut() {
+            let button = document.getElementById("mouse");
+            button.innerHTML = "PASSE O MOUSE NOVAMENTE!"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!-- https://dontpad.com/lmst02 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .login-form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-form label {
+        display: block;
+        margin-bottom: 2px;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+
+      .login-form input {
+        width: 95%;
+        padding: 5px;
+        padding-left: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .login-form button {
+        width: 30%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: large;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .login-form button:hover {
+        background-color: #0056b3;
+      }
+
+      .login-form .error {
+        color: red;
+        font-size: small;
+        font-weight: bold;
+        margin-top: 2px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Cadastro</h2>
+    <form
+      class="login-form"
+      id="myForm"
+      method="post"
+      action="https://httpbin.org/post"
+    >
+      <label for="username">Nome</label>
+      <input type="text" id="username" name="username" />
+      <div id="username-error" class="error"></div>
+
+      <label for="course">Curso</label>
+      <input type="text" id="course" name="course" />
+      <div id="course-error" class="error"></div>
+
+      <label for="ira">IRA</label>
+      <input type="number" id="ira" name="ira" step="0.1" />
+      <div id="ira-error" class="error"></div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" />
+      <div id="password-error" class="error"></div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+      document.getElementById("myForm").addEventListener("submit", (e) => {
+        
+        /*USERNAME*/
+        handleInputText("username","username-error",e);
+        /*COURSE*/
+        handleInputText("course","course-error",e);
+        /*PASSWORD*/
+        handleInputText("password","password-error",e);
+        /*IRA*/
+        handleInputNumber("ira","ira-error",e)
+        
+      }
+    );
+
+      function handleInputText(inputId, errorId, e) {
+        
+        let inputElement = document.getElementById(inputId);
+        let divError = document.getElementById(errorId);
+        divError.style.display = "none";
+        inputElement.style.borderColor = "#ccc"
+        if (inputElement.value == "") {
+          divError.innerHTML = "Campo vazio!";
+          divError.style.display = "block";
+          inputElement.style.borderColor = "red";
+          e.preventDefault();
+        } else if (inputElement.value.length < 5) {
+          divError.innerHTML = "O campo deve ter pelo menos 5 caracteres!";
+          divError.style.display = "block";
+          inputElement.style.borderColor = "red";
+          e.preventDefault();
+        }
+      }
+
+      function handleInputNumber(inputId, errorId, e) {
+        let inputElement = document.getElementById(inputId);
+        let divError = document.getElementById(errorId);
+        let x = inputElement.value;
+        divError.style.display = "none";
+        inputElement.style.borderColor = "#ccc"
+        if ( x =="" || isNaN(x) || x < 0 || x > 10){
+          divError.innerHTML = "Número inválido";
+          divError.style.display = "block";
+          inputElement.style.borderColor = "red"
+          e.preventDefault();
+        }
+      }
+      
+    </script>
+  </body>
+</html>

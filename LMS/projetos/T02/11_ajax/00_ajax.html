@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  </head>
+  <body>
+   
+    <h1>AXIOS e FETCH</h1>
+    <h1 id="h1-id"></h1>
+    <button onclick="voltar()">VOLTAR -1</button>
+    <button onclick="continuar()">CONTINUAR + 1</button>
+    <input type="number" id="input-number" value="5" required/> <button onclick="entrarPokemonId()">OK</button>
+    <h3 id="nome-id"></h3>
+    <img src="" alt="pokemon" width="250px" id="pokemon-id" />
+    <br />
+    <img src="" alt="pokemonSvg" width="250px" id="pokemon-svg-id" />
+    <script>
+      let number = 5;
+      getPokemonFetchAsyncAwait(number);
+
+      function entrarPokemonId() {
+        let id = document.getElementById("input-number").value
+        number = parseInt(id)
+        document.getElementById("h1-id").innerHTML = "ID: " + id
+        getPokemonFetchAsyncAwait(id);
+      }
+
+      function voltar() {
+        number = number - 1;
+        if(number <= 0) {
+            number = 1;
+        }
+        document.getElementById("h1-id").innerHTML = "ID: " + number
+        getPokemonFetchAsyncAwait(number);
+      }
+
+      function continuar() {
+        number = number + 1;
+        if(number >= 1026) {
+            number = 1025;
+        }
+        document.getElementById("h1-id").innerHTML = "ID: " + number
+        getPokemonFetchAsyncAwait(number);
+      }
+
+      function getPokemonAxios() {
+        axios
+          .get("https://pokeapi.co/api/v2/pokemon/charmander")
+          .then((response) => {
+            //console.log("Deu certo!");
+            //console.log(response.data.sprites.front_default);
+
+            let nome = document.getElementById("nome-id");
+            nome.innerHTML = response.data.name;
+
+            let pokemonImg = document.getElementById("pokemon-id");
+            pokemonImg.src = response.data.sprites.front_default;
+
+            let pokemonImgSvg = document.getElementById("pokemon-svg-id");
+            pokemonImgSvg.src =
+              response.data.sprites.other.dream_world.front_default;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+
+      function getPokemonFetch() {
+        fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+          .then((response) => {
+            return response.json();
+          })
+          .then((json) => {
+            //console.log(json);
+            let nome = document.getElementById("nome-id");
+            nome.innerHTML = json.name;
+
+            let pokemonImg = document.getElementById("pokemon-id");
+            pokemonImg.src = json.sprites.front_default;
+
+            let pokemonImgSvg = document.getElementById("pokemon-svg-id");
+            pokemonImgSvg.src = json.sprites.other.dream_world.front_default;
+          })
+          .catch((error) => console.log(error));
+      }
+
+      async function getPokemonAxiosAsyncAwait() {
+        try {
+          let response = await axios.get(
+            "https://pokeapi.co/api/v2/pokemon/100"
+          );
+
+          let nome = document.getElementById("nome-id");
+          nome.innerHTML = response.data.name;
+
+          let pokemonImg = document.getElementById("pokemon-id");
+          pokemonImg.src = response.data.sprites.front_default;
+
+          let pokemonImgSvg = document.getElementById("pokemon-svg-id");
+          pokemonImgSvg.src =
+            response.data.sprites.other.dream_world.front_default;
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+      async function getPokemonFetchAsyncAwait(id) {
+        try {
+          //let response = await fetch("https://pokeapi.co/api/v2/pokemon/"+id);
+          let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+          let json = await response.json();
+
+          let nome = document.getElementById("nome-id");
+          nome.innerHTML = json.name;
+
+          let pokemonImg = document.getElementById("pokemon-id");
+          pokemonImg.src = json.sprites.front_default;
+
+          let pokemonImgSvg = document.getElementById("pokemon-svg-id");
+          pokemonImgSvg.src = json.sprites.other.dream_world.front_default;
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      //getPokemonAxios();
+      //getPokemonFetch();
+      //getPokemonAxiosAsyncAwait();
+      //getPokemonFetchAsyncAwait(500);
+    </script>
+  </body>
+</html>

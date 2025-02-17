@@ -1,0 +1,119 @@
+<!-- https://dontpad.com/lmst01 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+           font-family: Arial, Helvetica, sans-serif; 
+           background-color: #f4f4f4;
+        }
+
+        .my-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px 
+            rgba(0,0,0,0.1);
+        }
+
+        .my-form label {
+            display: block;
+            margin-bottom: 2px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .my-form input {
+            width: 95%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .my-form button {
+            width: 30%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: large;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .my-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .my-form .error {
+            font-weight: bold;
+            font-size: small;
+            color: red;
+            margin-top: 2px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Aluno</h1>
+    
+    <form class="my-form" id="id-form" method="post" action="https://httpbin.org/post">
+        <label for="username">Nome:</label>
+        <input 
+            type="text" 
+            id="username" 
+            name="username"
+        />
+        <div class="error" id="error-username"></div>
+
+        <label for="course">Curso:</label>
+        <input 
+            type="text" 
+            id="course" 
+            name="course"
+
+        />
+        <div class="error" id="error-course"></div>
+
+        <label for="ira">IRA:</label>
+        <input 
+            type="number" 
+            id="ira"
+            step="0.1" 
+            name="ira"/>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+    <script>
+        let form = document.getElementById("id-form");
+        form.addEventListener(
+            "submit",
+            (event) => {
+               /*username*/
+               let username = document.getElementById("username");
+               let usernameError = document.getElementById("error-username")
+               usernameError.style.display = "none";
+               if (username.value == "") {
+                usernameError.innerHTML = "Campo vazio!"
+                usernameError.style.display = "block"
+                event.preventDefault();
+               }
+
+               /*course*/
+               let course = document.getElementById("course");
+               let courseError = document.getElementById("error-course")
+               courseError.style.display = "none";
+               if (course.value == "") {
+                courseError.innerHTML = "Campo vazio!"
+                courseError.style.display = "block"
+                event.preventDefault();
+               }
+            }
+        )
+    </script>
+</body>
+</html>
